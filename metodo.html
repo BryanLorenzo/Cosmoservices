@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Nostro Metodo — CosmoServices</title>
+  <meta name="description"
+    content="Scopri nel dettaglio come CosmoServices trasforma la tua idea in un progetto digitale di successo in 4 fasi." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Star Canvas Background -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🚀</div>
+      <span class="logo-text"><span>Cosmo</span>Services</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html#servizi">Servizi</a></li>
+      <li><a href="index.html#about">Chi siamo</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="index.html#testimonials">Clienti</a></li>
+      <li><a href="index.html#contatti" class="nav-cta">Inizia ora →</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ══════════════ HEADER METODO ══════════════ -->
+    <section class="hero" style="min-height: 50vh; padding-top: 150px; padding-bottom: 50px;">
+      <div class="hero-bg-glow glow-1" style="top: 0;"></div>
+
+      <div class="hero-content">
+        <a href="index.html" class="btn-secondary"
+          style="margin-bottom: 2rem; display: inline-block; padding: 10px 20px;">&larr; Torna alla Home</a>
+        <span class="section-label reveal">Il nostro metodo in dettaglio</span>
+        <h1 class="hero-title reveal delay-1" style="font-size: clamp(2.5rem, 5vw, 4rem);">
+          Come portiamo il tuo brand<br />
+          <span class="gradient-text">a un altro livello</span>
+        </h1>
+        <p class="hero-subtitle reveal delay-2">
+          Scopri passo dopo passo come lavoriamo al tuo fianco, dall'idea iniziale fino al lancio ufficiale e oltre.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════ STICKY SCROLL METODO ══════════════ -->
+    <section class="method-scroller" id="method-scroller">
+      <div class="scroller-container">
+
+        <!-- Scrolling Content (Left) -->
+        <div class="scroller-text">
+
+          <div class="scroll-step" data-step="1">
+            <div class="step-meta">
+              <span class="step-num-big">01</span>
+            </div>
+            <h3 class="step-title-big">Analisi delle tue necessità</h3>
+            <p class="step-text-large">
+              Tutto inizia da te. Ci sediamo insieme per comprendere a fondo
+              il tuo brand, i tuoi obiettivi e le sfide che affronti. Vogliamo capire esattamente
+              come e dove possiamo farti fare la differenza nel tuo mercato. Analizziamo i tuoi competitor,
+              studiamo il tuo target e definiamo insieme i KPI di successo.
+            </p>
+          </div>
+
+          <div class="scroll-step" data-step="2">
+            <div class="step-meta">
+              <span class="step-num-big">02</span>
+            </div>
+            <h3 class="step-title-big">Prima bozza in 24h</h3>
+            <p class="step-text-large">
+              Sappiamo che il tuo tempo è prezioso. Per questo, entro sole 24 ore dal nostro primo
+              confronto, ti presenteremo una prima bozza visiva o un prototipo. Così potrai vedere
+              subito in quale direzione stiamo portando il tuo progetto, allineandoci all'istante sulla visione
+              estetica.
+            </p>
+          </div>
+
+          <div class="scroll-step" data-step="3">
+            <div class="step-meta">
+              <span class="step-num-big">03</span>
+            </div>
+            <h3 class="step-title-big">Revisioni illimitate</h3>
+            <p class="step-text-large">
+              Il progetto deve rispecchiarti al 100%. Lavoriamo a stretto contatto con te,
+              raccogliamo i tuoi feedback e perfezioniamo ogni dettaglio. Effettueremo tutte
+              le modifiche necessarie finché non sarai completamente innamorato del risultato. Trasparenza assoluta in
+              ogni fase.
+            </p>
+          </div>
+
+          <div class="scroll-step" data-step="4">
+            <div class="step-meta">
+              <span class="step-num-big">04</span>
+            </div>
+            <h3 class="step-title-big">Collaudo e Lancio</h3>
+            <p class="step-text-large">
+              Siamo pronti al decollo. Prima di andare online, testiamo ogni singola funzionalità
+              insieme a te per garantirti che tutto sia perfetto. Ti consegniamo il prodotto finito
+              e ti formiamo per gestirlo in totale autonomia, rimanendo sempre a disposizione.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Sticky Visual (Right) -->
+        <div class="scroller-visual">
+          <div class="sticky-card"
+            style="padding: 0; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, var(--bg-card), var(--bg-primary));">
+            <div id="method3dContainer" style="position: absolute; inset: 0; z-index: 1;"></div>
+
+            <div class="layer-content"
+              style="position: absolute; bottom: 2rem; width: 100%; text-align: center; z-index: 2; pointer-events: none;">
+              <h4 id="method3dTitle"
+                style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 1;">
+                Fase 1: Discovery</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════ CTA IMMERSIVA ══════════════ -->
+    <section class="cta-immersive">
+      <div class="cta-immersive-wrapper">
+        <h2 class="cta-immersive-title reveal">Pronto a portare il tuo brand oltre i limiti?</h2>
+        <a href="index.html#contatti" class="btn-mega reveal delay-1">Inizia il tuo viaggio 🚀</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom: 0;">
+          <div class="logo-icon">🚀</div>
+          <span class="logo-text"><span>Cosmo</span>Services</span>
+        </a>
+        <p>Trasformiamo idee in esperienze digitali cosmiche. Design premium, strategie vincenti, risultati misurabili.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          <a href="#" class="social-link" aria-label="Behance">🎨</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <ul>
+          <li><a href="index.html#servizi">Web Design</a></li>
+          <li><a href="index.html#servizi">Branding</a></li>
+          <li><a href="index.html#servizi">E-Commerce</a></li>
+          <li><a href="index.html#servizi">SEO</a></li>
+          <li><a href="index.html#servizi">UX Design</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agenzia</h4>
+        <ul>
+          <li><a href="index.html#about">Chi siamo</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#testimonials">Clienti</a></li>
+          <li><a href="index.html#contatti">Contatti</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Ricevi tips di design e
+          marketing direttamente nella tua inbox.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="La tua email" required />
+          <button type="submit" aria-label="Iscriviti">→</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 CosmoServices. Tutti i diritti riservati. Made with 💜 a Milano</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Termini di servizio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

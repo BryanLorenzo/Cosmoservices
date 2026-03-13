@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Nostra Vision — CosmoServices</title>
+    <meta name="description"
+        content="La nostra missione è rendere il digitale semplice e accessibile a tutti, usando le ultime tecnologie per far crescere il tuo business al 110%." />
+    <meta name="keywords" content="vision, missione, digitalizzazione, accessibilità digitale, CosmoServices" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+    <style>
+        /* ── Vision Page Specific Styles ── */
+
+        /* Hero */
+        .vision-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 5% 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-hero-glow-1 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.22) 0%, transparent 65%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(80px);
+            pointer-events: none;
+            animation: pulseGlow 7s ease-in-out infinite alternate;
+        }
+
+        .vision-hero-glow-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+            bottom: 0;
+            right: 5%;
+            filter: blur(80px);
+            pointer-events: none;
+            animation: pulseGlow 9s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                opacity: 0.5;
+                transform: translateX(-50%) scale(1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) scale(1.15);
+            }
+        }
+
+        .vision-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+        }
+
+        .vision-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 22px;
+            background: rgba(124, 58, 237, 0.15);
+            border: 1px solid rgba(124, 58, 237, 0.35);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #a855f7;
+            margin-bottom: 2rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            animation: fadeInDown 0.8s ease both;
+        }
+
+        .vision-hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.8rem, 7vw, 6rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .vision-hero-title .gradient-stretch {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 55%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .vision-hero-sub {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #94a3b8;
+            max-width: 680px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .vision-hero-cta {
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #94a3b8;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #f8fafc;
+        }
+
+        /* ── Manifesto ── */
+        .vision-manifesto {
+            background: rgba(124, 58, 237, 0.04);
+            border-top: 1px solid rgba(124, 58, 237, 0.1);
+            border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+        }
+
+        .manifesto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .manifesto-text .section-label {
+            margin-bottom: 1rem;
+        }
+
+        .manifesto-text h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .manifesto-text h2 em {
+            font-style: normal;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .manifesto-text p {
+            font-size: 1rem;
+            color: #94a3b8;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+
+        .manifesto-text p strong {
+            color: #f8fafc;
+            font-weight: 600;
+        }
+
+        .manifesto-visual {
+            position: relative;
+        }
+
+        .manifesto-card-stack {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .mani-card {
+            padding: 1.6rem 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .mani-card:hover {
+            transform: translateX(8px);
+            border-color: rgba(124, 58, 237, 0.4);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.15);
+        }
+
+        .mani-card-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            background: rgba(124, 58, 237, 0.15);
+            border-radius: 14px;
+            border: 1px solid rgba(124, 58, 237, 0.25);
+        }
+
+        .mani-card-text h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .mani-card-text p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ── Values ── */
+        .vision-values {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .value-card {
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(236, 72, 153, 0.03) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(124, 58, 237, 0.35);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 58, 237, 0.12);
+        }
+
+        .value-card:hover::before {
+            opacity: 1;
+        }
+
+        .value-card-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.15));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card p {
+            font-size: 0.92rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Promise ── */
+        .vision-promise {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-promise::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(124, 58, 237, 0.14) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .promise-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-quote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .promise-quote span {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 55%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .promise-sub {
+            font-size: 1.05rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .promise-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ── Keyframes ── */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 900px) {
+            .manifesto-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .vision-hero-title {
+                font-size: 2.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Star Canvas Background -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Scroll Progress -->
+    <div id="scrollProgress"></div>
+
+    <!-- ══════════════ NAVBAR ══════════════ -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">🚀</div>
+            <span class="logo-text"><span>Cosmo</span>Services</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html#servizi">Servizi</a></li>
+            <li><a href="index.html#vision" class="nav-active">La nostra vision</a></li>
+            <li><a href="index.html#about">Chi siamo</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#testimonials">Clienti</a></li>
+            <li><a href="index.html#contatti" class="nav-cta">Inizia ora →</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ══════════════ HERO ══════════════ -->
+        <section class="vision-hero" id="home">
+            <div class="vision-hero-glow-1"></div>
+            <div class="vision-hero-glow-2"></div>
+
+            <div class="vision-hero-content">
+                <a href="index.html" class="back-link">← Torna alla home</a>
+
+                <div class="vision-hero-badge">
+                    <span class="badge-dot"></span>
+                    La nostra vision
+                </div>
+
+                <h1 class="vision-hero-title">
+                    Il digitale è<br />
+                    <span class="gradient-stretch">per tutti.</span>
+                </h1>
+
+                <p class="vision-hero-sub">
+                    Viviamo in un'era di innovazione continua e vertiginosa. Ogni giorno nascono nuove tecnologie,
+                    nuovi strumenti, nuovi modi di fare business. Eppure, troppe persone e troppe imprese si sentono
+                    tagliate fuori da questo mondo. Noi siamo qui per cambiare questo.
+                </p>
+
+                <div class="vision-hero-cta">
+                    <a href="index.html#contatti" class="btn-primary">Lavora con noi 🚀</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════ MANIFESTO ══════════════ -->
+        <section class="vision-manifesto" style="padding: 120px 5%;">
+            <div class="manifesto-grid">
+
+                <div class="manifesto-text reveal-left">
+                    <span class="section-label">Il problema che risolviamo</span>
+                    <h2>Il mondo digitale evolve.<br /><em>Noi ti portiamo con lui.</em></h2>
+                    <p>
+                        Le innovazioni tecnologiche non aspettano nessuno. Ogni anno il panorama digitale
+                        si trasforma, e chi non riesce a stare al passo rischia di restare indietro —
+                        <strong>perdendo opportunità di business, visibilità e clienti.</strong>
+                    </p>
+                    <p>
+                        Il nostro obiettivo è essere il <strong>ponte tra complessità tecnologica e semplicità
+                            d'uso</strong>.
+                        Tradurre le innovazioni più avanzate in soluzioni concrete, comprensibili e accessibili
+                        per qualsiasi tipo di business, grande o piccolo che sia.
+                    </p>
+                    <p>
+                        Perché il digitale non dovrebbe essere un privilegio riservato a chi ha già le competenze.
+                        <strong>Dovrebbe essere un'opportunità per tutti.</strong>
+                    </p>
+                </div>
+
+                <div class="manifesto-visual reveal-right">
+                    <div class="manifesto-card-stack">
+                        <div class="mani-card">
+                            <div class="mani-card-icon">🧩</div>
+                            <div class="mani-card-text">
+                                <h4>Semplifichiamo la complessità</h4>
+                                <p>Trasformiamo tecnologie complesse in strumenti facili da usare e capire</p>
+                            </div>
+                        </div>
+                        <div class="mani-card">
+                            <div class="mani-card-icon">🤝</div>
+                            <div class="mani-card-text">
+                                <h4>Siamo il tuo partner digitale</h4>
+                                <p>Non solo un fornitore — un alleato strategico per la crescita del tuo business</p>
+                            </div>
+                        </div>
+                        <div class="mani-card">
+                            <div class="mani-card-icon">📈</div>
+                            <div class="mani-card-text">
+                                <h4>Risultati al 110%</h4>
+                                <p>Ogni soluzione è progettata per portare il tuo business alla massima performance</p>
+                            </div>
+                        </div>
+                        <div class="mani-card">
+                            <div class="mani-card-icon">🌍</div>
+                            <div class="mani-card-text">
+                                <h4>Accessibilità per tutti</h4>
+                                <p>Nessun business è troppo piccolo per meritare una presenza digitale eccellente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════ VALORI ══════════════ -->
+        <section style="padding: 120px 5%;">
+            <div class="vision-values">
+                <div class="section-header centered">
+                    <span class="section-label reveal">I nostri valori</span>
+                    <h2 class="section-title reveal delay-1">Cosa guida ogni cosa<br />che facciamo</h2>
+                    <p class="section-subtitle reveal delay-2" style="margin: 0 auto;">
+                        Ogni progetto, ogni decisione, ogni riga di codice nasce da questi princìpi fondamentali.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+
+                    <div class="value-card reveal delay-1">
+                        <div class="value-card-num">01</div>
+                        <h3>Accessibilità senza compromessi</h3>
+                        <p>
+                            Crediamo che ogni persona e ogni impresa — indipendentemente dalle proprie competenze
+                            tecnologiche —
+                            abbia il diritto di accedere alle opportunità del digitale. Progettiamo soluzioni che siano
+                            intuitive, chiare e utilizzabili da chiunque, senza dover studiare per anni.
+                        </p>
+                    </div>
+
+                    <div class="value-card reveal delay-2">
+                        <div class="value-card-num">02</div>
+                        <h3>Innovazione a servizio delle persone</h3>
+                        <p>
+                            Non inseguiamo la tecnologia per il gusto di farlo. Usiamo le ultime innovazioni —
+                            AI, automazioni, design avanzato — solo quando portano un valore reale e concreto
+                            ai nostri clienti. La tecnologia deve servire le persone, non il contrario.
+                        </p>
+                    </div>
+
+                    <div class="value-card reveal delay-3">
+                        <div class="value-card-num">03</div>
+                        <h3>Presenza online che funziona davvero</h3>
+                        <p>
+                            Un sito web non è solo un biglietto da visita. È un motore di crescita attivo.
+                            Il nostro standard è portare ogni business a funzionare al 110% online:
+                            più clienti, più visibilità, più fatturato — in modo misurabile e trasparente.
+                        </p>
+                    </div>
+
+                    <div class="value-card reveal delay-4">
+                        <div class="value-card-num">04</div>
+                        <h3>Partnership a lungo termine</h3>
+                        <p>
+                            Non consegniamo un progetto e spariscono. Rimaniamo al tuo fianco mentre il tuo
+                            business cresce, il mercato cambia e le tecnologie evolvono.
+                            Il tuo successo digitale è il nostro successo — oggi, domani e nel tempo.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════ PROMISE / CTA ══════════════ -->
+        <section class="vision-promise" style="padding: 120px 5%;">
+            <div class="promise-inner">
+                <span class="section-label reveal">La nostra promessa</span>
+                <h2 class="promise-quote reveal delay-1">
+                    "Rendiamo il digitale<br />
+                    <span>semplice, potente<br />e accessibile a tutti."</span>
+                </h2>
+                <p class="promise-sub reveal delay-2">
+                    Hai un business che vuole crescere online ma non sai da dove cominciare?
+                    Sei già online ma vuoi fare di più? Qualunque sia il tuo punto di partenza,
+                    siamo qui per portarti dove vuoi arrivare.
+                </p>
+                <div class="promise-cta-group reveal delay-3">
+                    <a href="index.html#contatti" class="btn-primary">Inizia il tuo viaggio digitale 🚀</a>
+                    <a href="index.html#servizi" class="btn-secondary">Scopri i nostri servizi →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom: 0;">
+                    <div class="logo-icon">🚀</div>
+                    <span class="logo-text"><span>Cosmo</span>Services</span>
+                </a>
+                <p>Trasformiamo idee in esperienze digitali cosmiche. Design premium, strategie vincenti, risultati
+                    misurabili.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                    <a href="#" class="social-link" aria-label="Behance">🎨</a>
+                    <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servizi</h4>
+                <ul>
+                    <li><a href="index.html#servizi">Web Design</a></li>
+                    <li><a href="index.html#servizi">Branding</a></li>
+                    <li><a href="index.html#servizi">E-Commerce</a></li>
+                    <li><a href="index.html#servizi">SEO</a></li>
+                    <li><a href="index.html#servizi">UX Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Agenzia</h4>
+                <ul>
+                    <li><a href="index.html#about">Chi siamo</a></li>
+                    <li><a href="vision.html">La nostra vision</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#testimonials">Clienti</a></li>
+                    <li><a href="index.html#contatti">Contatti</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Ricevi tips di design e
+                    marketing direttamente nella tua inbox.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="La tua email" required />
+                    <button type="submit" aria-label="Iscriviti">→</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2025 CosmoServices. Tutti i diritti riservati. Made with 💜 a Milano</span>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Termini di servizio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

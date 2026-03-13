@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmoServices — Web Design Agency che ti porta oltre le stelle</title>
+  <meta name="description"
+    content="CosmoServices è la web design agency italiana specializzata in siti web premium, branding futuristico e strategie digitali che fanno emergere il tuo business." />
+  <meta name="keywords" content="web design agency, siti web, branding, UI/UX design, SEO, e-commerce, CosmoServices" />
+  <meta property="og:title" content="CosmoServices — Web Design Agency" />
+  <meta property="og:description" content="Trasformiamo le tue idee in esperienze digitali cosmiche." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Star Canvas Background -->
+  <canvas id="starCanvas"></canvas>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg">Messaggio inviato!</span>
+  </div>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">🚀</div>
+      <span class="logo-text"><span>Cosmo</span>Services</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="vision.html">La nostra vision</a></li>
+      <li><a href="#about">Chi siamo</a></li>
+      <li><a href="metodo.html">Come lavoriamo</a></li>
+      <li><a href="#testimonials">Clienti</a></li>
+      <li><a href="#contatti" class="nav-cta">Inizia ora →</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="hero" id="home">
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Agenzia Web Design Italiana
+        </div>
+
+        <h1 class="hero-title">
+          Progettiamo il futuro<br />
+          del tuo brand
+          <span class="gradient-text">
+            <span class="hero-typing-wrapper"><span id="typing-text">Web Design</span><span
+                class="cursor-blink"></span></span>
+          </span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Trasformiamo le tue idee in esperienze digitali straordinarie.
+          Siti web premium, identità visive potenti e strategie di crescita
+          che portano il tuo business verso le stelle.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contatti" class="btn-primary">Inizia il tuo progetto 🚀</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-count="150" data-suffix="+">0+</div>
+            <div class="stat-label">Progetti completati</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="98" data-suffix="%">0%</div>
+            <div class="stat-label">Clienti soddisfatti</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="5" data-suffix="★">0★</div>
+            <div class="stat-label">Rating medio</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="8" data-suffix=" anni">0 anni</div>
+            <div class="stat-label">Di esperienza</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ══════════════ VISION ══════════════ -->
+    <section class="vision-teaser" id="vision">
+      <div class="vision-teaser-inner">
+
+        <div class="vision-badge reveal">
+          <span class="badge-dot"></span>
+          La nostra vision
+        </div>
+
+        <h2 class="vision-teaser-title reveal delay-1">
+          Il digitale è per tutti.
+          <span class="gradient-text-vision">Nessuno escluso.</span>
+        </h2>
+
+        <p class="vision-teaser-subtitle reveal delay-2">
+          In un mondo in cui le innovazioni tecnologiche evolvono a una velocità vertiginosa,
+          troppe persone e troppe imprese si sentono tagliate fuori. Noi esistiamo per cambiare questo.
+          La nostra missione è rendere il digitale <strong>semplice, accessibile e potente</strong> per chiunque —
+          portando ogni business a funzionare al 110%.
+        </p>
+
+        <div class="vision-pillars reveal delay-3">
+          <div class="vision-pillar">
+            <canvas class="pillar-3d" id="pillar3d-1" width="80" height="80"></canvas>
+            <h4>Accessibilità</h4>
+            <p>Il digitale non deve essere un privilegio. Lo rendiamo comprensibile e utilizzabile da tutti.</p>
+          </div>
+          <div class="vision-pillar">
+            <canvas class="pillar-3d" id="pillar3d-2" width="80" height="80"></canvas>
+            <h4>Innovazione</h4>
+            <p>Usiamo le tecnologie più avanzate per costruire soluzioni che fanno la differenza oggi.</p>
+          </div>
+          <div class="vision-pillar">
+            <canvas class="pillar-3d" id="pillar3d-3" width="80" height="80"></canvas>
+            <h4>Crescita</h4>
+            <p>Portiamo il tuo business online e lo facciamo funzionare al massimo del suo potenziale.</p>
+          </div>
+        </div>
+
+        <div class="reveal delay-4" style="text-align:center; margin-top: 3.5rem;">
+          <a href="vision.html" class="btn-vision">Scopri la nostra vision completa →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ SERVICES ══════════════ -->
+    <section class="services" id="servizi">
+      <div class="section-header centered">
+        <span class="section-label reveal">Cosa offriamo</span>
+        <h2 class="section-title reveal delay-1">Servizi progettati<br />per far crescere il tuo brand</h2>
+        <p class="section-subtitle reveal delay-2">Dalle strategie digitali al design visivo, offriamo soluzioni
+          complete per portare la tua presenza online ad un livello superiore.</p>
+      </div>
+
+      <div class="services-timeline" id="servicesTimeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+
+        <div class="timeline-item left reveal-left delay-1">
+          <div class="timeline-dot icon-violet">🌐</div>
+          <div class="service-card">
+            <div class="card-glow"></div>
+            <h3 class="service-title">Web Design Premium</h3>
+            <p class="service-desc">Realizziamo siti web visivamente straordinari e altamente performanti, ottimizzati
+              per conversioni e user experience eccezionale.</p>
+            <div class="service-tags">
+              <span class="tag">UI/UX</span><span class="tag">Responsive</span><span class="tag">Animazioni</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal-right delay-2">
+          <div class="timeline-dot icon-pink">✨</div>
+          <div class="service-card">
+            <div class="card-glow" style="--glow-violet: rgba(236,72,153,0.4)"></div>
+            <h3 class="service-title">Branding & Identità</h3>
+            <p class="service-desc">Creiamo identità visive potenti e memorabili: logo, palette colori, tipografia e
+              linee guida che fanno emergere il tuo brand.</p>
+            <div class="service-tags">
+              <span class="tag">Logo design</span><span class="tag">Brand guide</span><span class="tag">Visual
+                identity</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal-left delay-1">
+          <div class="timeline-dot icon-blue">🛒</div>
+          <div class="service-card">
+            <div class="card-glow" style="--glow-violet: rgba(59,130,246,0.4)"></div>
+            <h3 class="service-title">E-Commerce</h3>
+            <p class="service-desc">Sviluppiamo shop online ad alte prestazioni con checkout ottimizzato, gestione
+              prodotti semplificata e integrazioni di pagamento sicure.</p>
+            <div class="service-tags">
+              <span class="tag">Shopify</span><span class="tag">WooCommerce</span><span class="tag">Custom</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal-right delay-2">
+          <div class="timeline-dot icon-cyan">📈</div>
+          <div class="service-card">
+            <div class="card-glow" style="--glow-violet: rgba(6,182,212,0.4)"></div>
+            <h3 class="service-title">SEO & Performance</h3>
+            <p class="service-desc">Ottimizziamo il tuo sito per i motori di ricerca con strategie SEO avanzate, Core
+              Web Vitals e contenuti che convertono.</p>
+            <div class="service-tags">
+              <span class="tag">On-page SEO</span><span class="tag">Technical SEO</span><span
+                class="tag">Analytics</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal-left delay-1">
+          <div class="timeline-dot icon-purple">🎨</div>
+          <div class="service-card">
+            <div class="card-glow" style="--glow-violet: rgba(168,85,247,0.4)"></div>
+            <h3 class="service-title">UX Research & Design</h3>
+            <p class="service-desc">Analizziamo il comportamento degli utenti per progettare interfacce intuitive che
+              massimizzano il coinvolgimento e le conversioni.</p>
+            <div class="service-tags">
+              <span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">A/B
+                Testing</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal-right delay-2">
+          <div class="timeline-dot icon-green">🤖</div>
+          <div class="service-card">
+            <div class="card-glow" style="--glow-violet: rgba(34,197,94,0.4)"></div>
+            <h3 class="service-title">Automazioni & AI</h3>
+            <p class="service-desc">Integriamo soluzioni AI e automazioni intelligenti per ottimizzare i tuoi processi
+              aziendali e offrire esperienze personalizzate.</p>
+            <div class="service-tags">
+              <span class="tag">Chatbot AI</span><span class="tag">Automation</span><span
+                class="tag">Integrations</span>
+            </div>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section class="about" id="about">
+      <div class="about-grid">
+
+        <div class="about-visual reveal-left">
+          <div id="about3dContainer"
+            style="width: 100%; aspect-ratio: 1; max-width: 450px; margin: 0 auto; position: relative;"></div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <span class="section-label">Chi siamo</span>
+          <h2 class="section-title">Una squadra di<br />visionari digitali</h2>
+          <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+            CosmoServices nasce dalla passione per il design e la tecnologia.
+            Siamo un team di designer, sviluppatori e strateghi digitali uniti
+            da un unico obiettivo: far brillare il tuo brand in un universo digitale sempre più affollato.
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">
+            Ogni progetto è per noi una missione. Ascoltiamo le tue esigenze,
+            studiamo il mercato di riferimento e progettiamo soluzioni su misura
+            che non solo appaiono fantastiche, ma producono risultati concreti e misurabili.
+          </p>
+
+          <div class="about-values">
+            <div class="value-item">
+              <span class="neon-line neon-top"></span>
+              <span class="neon-line neon-right"></span>
+              <span class="neon-line neon-bottom"></span>
+              <span class="neon-line neon-left"></span>
+              <canvas class="value-3d" id="value3d-1" width="52" height="52"></canvas>
+              <div class="value-text">
+                <h4>Risultati reali</h4>
+                <p>KPI misurabili e ROI trasparente</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="neon-line neon-top"></span>
+              <span class="neon-line neon-right"></span>
+              <span class="neon-line neon-bottom"></span>
+              <span class="neon-line neon-left"></span>
+              <canvas class="value-3d" id="value3d-2" width="52" height="52"></canvas>
+              <div class="value-text">
+                <h4>Consegna rapida</h4>
+                <p>Rispettiamo sempre le deadline</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="neon-line neon-top"></span>
+              <span class="neon-line neon-right"></span>
+              <span class="neon-line neon-bottom"></span>
+              <span class="neon-line neon-left"></span>
+              <canvas class="value-3d" id="value3d-3" width="52" height="52"></canvas>
+              <div class="value-text">
+                <h4>Affidabilità</h4>
+                <p>Supporto dedicato post-lancio</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="neon-line neon-top"></span>
+              <span class="neon-line neon-right"></span>
+              <span class="neon-line neon-bottom"></span>
+              <span class="neon-line neon-left"></span>
+              <canvas class="value-3d" id="value3d-4" width="52" height="52"></canvas>
+              <div class="value-text">
+                <h4>Eccellenza</h4>
+                <p>Design premium senza compromessi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ HOW WE WORK (SCHEMATIC) ══════════════ -->
+    <section class="how-we-work" id="metodo">
+      <div class="section-header centered">
+        <span class="section-label reveal">Il nostro metodo</span>
+        <h2 class="section-title reveal delay-1">Al centro di tutto,<br />ci sei tu e il tuo business</h2>
+        <p class="section-subtitle reveal delay-2" style="max-width: 650px;">
+          Un processo collaudato, trasparente e focalizzato sui tuoi obiettivi,
+          creato per trasformare le tue idee in un prodotto digitale di successo.
+        </p>
+      </div>
+
+      <div class="schematic-process reveal delay-1">
+        <div class="schematic-step">
+          <div class="schematic-icon-3d" id="schematicIcon1"></div>
+          <div class="schematic-info">
+            <span class="s-num" style="font-size: 1.1rem;">01</span>
+            <span class="s-title" style="font-size: 1.35rem;">Analisi delle necessità</span>
+          </div>
+        </div>
+
+        <div class="schematic-step">
+          <div class="schematic-icon-3d" id="schematicIcon2"></div>
+          <div class="schematic-info">
+            <span class="s-num" style="font-size: 1.1rem;">02</span>
+            <span class="s-title" style="font-size: 1.35rem;">Prima bozza in 24h</span>
+          </div>
+        </div>
+
+        <div class="schematic-step">
+          <div class="schematic-icon-3d" id="schematicIcon3"></div>
+          <div class="schematic-info">
+            <span class="s-num" style="font-size: 1.1rem;">03</span>
+            <span class="s-title" style="font-size: 1.35rem;">Revisioni illimitate</span>
+          </div>
+        </div>
+
+        <div class="schematic-step">
+          <div class="schematic-icon-3d" id="schematicIcon4"></div>
+          <div class="schematic-info">
+            <span class="s-num" style="font-size: 1.1rem;">04</span>
+            <span class="s-title" style="font-size: 1.35rem;">Collaudo e Lancio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal delay-3" style="text-align: center; margin-top: 4rem;">
+        <a href="metodo.html" class="btn-secondary">Scopri il processo in dettaglio →</a>
+      </div>
+    </section>
+
+    <!-- ══════════════ PORTFOLIO ══════════════ -->
+    <section class="portfolio" id="portfolio">
+      <div class="section-header">
+        <span class="section-label reveal">I nostri lavori</span>
+        <h2 class="section-title reveal delay-1">Progetti che parlano<br />da soli</h2>
+      </div>
+
+      <div class="portfolio-filter reveal delay-2">
+        <button class="filter-btn active" data-filter="all">Tutti</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="brand">Branding</button>
+        <button class="filter-btn" data-filter="app">App</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item reveal delay-1" data-category="web">
+          <div class="portfolio-bg bg-1">🏨</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Web Design</span>
+              <span class="portfolio-tag">UI/UX</span>
+            </div>
+            <h3 class="portfolio-title">Luxury Hotel Milano</h3>
+            <p class="portfolio-desc">Sito web premium per hotel 5 stelle con booking integrato</p>
+            <a href="#" class="portfolio-link">Vedi progetto →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal delay-2" data-category="ecommerce">
+          <div class="portfolio-bg bg-2">👗</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">E-Commerce</span>
+              <span class="portfolio-tag">Shopify</span>
+            </div>
+            <h3 class="portfolio-title">Aurora Fashion</h3>
+            <p class="portfolio-desc">Shop online di moda con AI styling assistant</p>
+            <a href="#" class="portfolio-link">Vedi progetto →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal delay-3" data-category="brand">
+          <div class="portfolio-bg bg-3">🎵</div>
+          <div class="portfolio-overlay">
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Branding</span>
+              <span class="portfolio-tag">Identity</span>
+            </div>
+            <h3 class="portfolio-title">SoundWave Records</h3>
+            <p class="portfolio-desc">Identità visiva completa per label musicale indipendente</p>
+            <a href="#" class="portfolio-link">Vedi progetto →</a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- ══════════════ TESTIMONIALS ══════════════ -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-header centered">
+        <span class="section-label reveal">Testimonianze</span>
+        <h2 class="section-title reveal delay-1">Cosa dicono<br />i nostri clienti</h2>
+      </div>
+
+      <div class="testimonials-track-wrapper reveal delay-2">
+        <div class="testimonials-track" id="testimonialsTrack">
+
+          <!-- Original set -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"CosmoServices ha trasformato completamente la nostra presenza online. Il nuovo
+              sito ha aumentato i contatti del 340% in soli 3 mesi. Un team straordinario!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-1">M</div>
+              <div>
+                <div class="author-name">Marco Bellini</div>
+                <div class="author-role">CEO, Bellini Architettura</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Finalmente un'agenzia che capisce davvero il brand. Il nostro e-commerce ha
+              raddoppiato le vendite dal lancio. Professionalità e creatività al massimo livello."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-2">S</div>
+              <div>
+                <div class="author-name">Sofia Ricci</div>
+                <div class="author-role">Founder, Atelier Ricci</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Il team di CosmoServices è senza dubbio il migliore con cui abbia mai
+              lavorato. Visione creativa, tempi rispettati e risultati incredibili. Li consiglio a tutti."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-3">L</div>
+              <div>
+                <div class="author-name">Luca Ferrero</div>
+                <div class="author-role">Direttore Marketing, TechItalia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Avevo un'idea vaga, loro l'hanno trasformata in un brand iconico. Il logo, i
+              colori, la comunicazione: tutto è perfetto. Investimento che vale ogni centesimo."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-4">G</div>
+              <div>
+                <div class="author-name">Giulia Moretti</div>
+                <div class="author-role">Imprenditrice, Moretti Wellness</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Da quando ho il nuovo sito, Google mi posiziona in prima pagina per tutte le
+              keyword principali. Il lavoro SEO che ha fatto CosmoServices è semplicemente eccezionale."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-5">A</div>
+              <div>
+                <div class="author-name">Andrea Costa</div>
+                <div class="author-role">Studio Legale Costa & Associati</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Risposta rapidissima, design impeccabile e un supporto post-lancio che non ti
+              aspetti. CosmoServices non è un fornitore, è un partner strategico di crescita."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-6">F</div>
+              <div>
+                <div class="author-name">Federica Bianchi</div>
+                <div class="author-role">CEO, Bianchi Construzioni</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicated for infinite loop -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"CosmoServices ha trasformato completamente la nostra presenza online. Il nuovo
+              sito ha aumentato i contatti del 340% in soli 3 mesi. Un team straordinario!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-1">M</div>
+              <div>
+                <div class="author-name">Marco Bellini</div>
+                <div class="author-role">CEO, Bellini Architettura</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Finalmente un'agenzia che capisce davvero il brand. Il nostro e-commerce ha
+              raddoppiato le vendite dal lancio. Professionalità e creatività al massimo livello."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-2">S</div>
+              <div>
+                <div class="author-name">Sofia Ricci</div>
+                <div class="author-role">Founder, Atelier Ricci</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Il team di CosmoServices è senza dubbio il migliore con cui abbia mai
+              lavorato. Visione creativa, tempi rispettati e risultati incredibili. Li consiglio a tutti."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-3">L</div>
+              <div>
+                <div class="author-name">Luca Ferrero</div>
+                <div class="author-role">Direttore Marketing, TechItalia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Avevo un'idea vaga, loro l'hanno trasformata in un brand iconico. Il logo, i
+              colori, la comunicazione: tutto è perfetto. Investimento che vale ogni centesimo."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-4">G</div>
+              <div>
+                <div class="author-name">Giulia Moretti</div>
+                <div class="author-role">Imprenditrice, Moretti Wellness</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Da quando ho il nuovo sito, Google mi posiziona in prima pagina per tutte le
+              keyword principali. Il lavoro SEO che ha fatto CosmoServices è semplicemente eccezionale."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-5">A</div>
+              <div>
+                <div class="author-name">Andrea Costa</div>
+                <div class="author-role">Studio Legale Costa & Associati</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">"Risposta rapidissima, design impeccabile e un supporto post-lancio che non ti
+              aspetti. CosmoServices non è un fornitore, è un partner strategico di crescita."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar av-6">F</div>
+              <div>
+                <div class="author-name">Federica Bianchi</div>
+                <div class="author-role">CEO, Bianchi Construzioni</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section class="contact" id="contatti">
+      <div class="section-header centered">
+        <span class="section-label reveal">Contattaci</span>
+        <h2 class="section-title reveal delay-1">Pronto a decollare? 🚀<br />Parliamo del tuo progetto</h2>
+        <p class="section-subtitle reveal delay-2">Compila il form o scrivici direttamente. Risponderemo entro 24 ore
+          con idee, strategie e un preventivo personalizzato.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <h3 class="contact-info-title">Iniziamo qualcosa<br />di straordinario insieme</h3>
+          <p class="contact-info-desc">Hai un'idea, un progetto o semplicemente vuoi capire come possiamo aiutarti?
+            Siamo qui. Nessun impegno, solo una conversazione.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="detail-icon">📧</div>
+              <div>
+                <div class="detail-label">Email</div>
+                <div class="detail-value">ciao@cosmoservices.it</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📞</div>
+              <div>
+                <div class="detail-label">Telefono</div>
+                <div class="detail-value">+39 02 1234 5678</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📍</div>
+              <div>
+                <div class="detail-label">Sede</div>
+                <div class="detail-value">Milano, Italia 🇮🇹</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">⏰</div>
+              <div>
+                <div class="detail-label">Orari</div>
+                <div class="detail-value">Lun–Ven, 9:00–18:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-right">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome e Cognome</label>
+                <input type="text" id="name" name="name" placeholder="Mario Rossi" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="mario@esempio.it" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Servizio di interesse</label>
+              <select id="service" name="service">
+                <option value="">Seleziona un servizio...</option>
+                <option>Web Design Premium</option>
+                <option>Branding & Identità Visiva</option>
+                <option>E-Commerce</option>
+                <option>SEO & Performance</option>
+                <option>UX Research & Design</option>
+                <option>Automazioni & AI</option>
+                <option>Altro / Più servizi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget approssimativo</label>
+              <select id="budget" name="budget">
+                <option value="">Budget stimato...</option>
+                <option>Meno di €1.000</option>
+                <option>€1.000 – €5.000</option>
+                <option>€5.000 – €15.000</option>
+                <option>€15.000 – €50.000</option>
+                <option>Oltre €50.000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Raccontaci il tuo progetto</label>
+              <textarea id="message" name="message"
+                placeholder="Descrivi brevemente il tuo progetto, il tuo brand e i tuoi obiettivi..."
+                required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Invia messaggio 🚀
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom: 0;">
+          <div class="logo-icon">🚀</div>
+          <span class="logo-text"><span>Cosmo</span>Services</span>
+        </a>
+        <p>Trasformiamo idee in esperienze digitali cosmiche. Design premium, strategie vincenti, risultati misurabili.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+          <a href="#" class="social-link" aria-label="Behance">🎨</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <ul>
+          <li><a href="#servizi">Web Design</a></li>
+          <li><a href="#servizi">Branding</a></li>
+          <li><a href="#servizi">E-Commerce</a></li>
+          <li><a href="#servizi">SEO</a></li>
+          <li><a href="#servizi">UX Design</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Agenzia</h4>
+        <ul>
+          <li><a href="#about">Chi siamo</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Clienti</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Ricevi tips di design e
+          marketing direttamente nella tua inbox.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="La tua email" required />
+          <button type="submit" aria-label="Iscriviti">→</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 CosmoServices. Tutti i diritti riservati. Made with 💜 a Milano</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Termini di servizio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>
+    /* ── About Section Value 3D Icons ── */
+    (function initValueIcons() {
+      if (typeof THREE === 'undefined') return;
+
+      const valueCfgs = [
+        {
+          id: 'value3d-1',
+          // 🎯 Bersaglio → 3 anelli concentrici (target)
+          createMesh: () => {
+            const grp = new THREE.Group();
+            const radii = [0.88, 0.58, 0.28];
+            const colors = [0xec4899, 0xa855f7, 0xf0abfc];
+            radii.forEach((r, i) => {
+              const geo = new THREE.TorusGeometry(r, 0.09, 10, 52);
+              const mat = new THREE.MeshPhongMaterial({
+                color: colors[i], emissive: 0x2d0a6b,
+                specular: 0xffffff, shininess: 160
+              });
+              grp.add(new THREE.Mesh(geo, mat));
+            });
+            return grp;
+          },
+          ry: 0.009, rx: 0.005
+        },
+        {
+          id: 'value3d-2',
+          // ⚡ Fulmine → forma estrusa in 3D
+          createMesh: () => {
+            const shape = new THREE.Shape();
+            shape.moveTo(0.18, 1.0);
+            shape.lineTo(-0.28, 0.08);
+            shape.lineTo(0.04, 0.08);
+            shape.lineTo(-0.18, -1.0);
+            shape.lineTo(0.32, -0.08);
+            shape.lineTo(0.0, -0.08);
+            shape.closePath();
+            const geo = new THREE.ExtrudeGeometry(shape, {
+              depth: 0.28, bevelEnabled: true,
+              bevelSize: 0.045, bevelThickness: 0.045, bevelSegments: 2
+            });
+            geo.center();
+            const mat = new THREE.MeshPhongMaterial({
+              color: 0xec4899, emissive: 0x5b0830,
+              specular: 0xffffff, shininess: 180
+            });
+            return new THREE.Mesh(geo, mat);
+          },
+          ry: 0.014, rx: 0.004
+        },
+        {
+          id: 'value3d-3',
+          // 🔒 Lucchetto → box body + mezzo toro (archetto)
+          createMesh: () => {
+            const grp = new THREE.Group();
+            // Corpo
+            const bodyGeo = new THREE.BoxGeometry(1.05, 0.85, 0.38);
+            const bodyMat = new THREE.MeshPhongMaterial({
+              color: 0x7c3aed, emissive: 0x1e0a50,
+              specular: 0xec4899, shininess: 130
+            });
+            const body = new THREE.Mesh(bodyGeo, bodyMat);
+            body.position.y = -0.22;
+            grp.add(body);
+            // Archetto (mezzo toro)
+            const archGeo = new THREE.TorusGeometry(0.33, 0.1, 10, 20, Math.PI);
+            const archMat = new THREE.MeshPhongMaterial({
+              color: 0xa855f7, emissive: 0x2d0a6b,
+              specular: 0xffffff, shininess: 150
+            });
+            const arch = new THREE.Mesh(archGeo, archMat);
+            arch.position.y = 0.62;
+            arch.rotation.z = Math.PI; // arco rivolto in alto
+            grp.add(arch);
+            return grp;
+          },
+          ry: 0.010, rx: 0.004
+        },
+        {
+          id: 'value3d-4',
+          // 🌟 Stella a 5 punte → forma estrusa in 3D
+          createMesh: () => {
+            const shape = new THREE.Shape();
+            const outer = 0.88, inner = 0.38, pts = 5;
+            for (let i = 0; i < pts * 2; i++) {
+              const angle = (i * Math.PI / pts) - Math.PI / 2;
+              const r = (i % 2 === 0) ? outer : inner;
+              const x = Math.cos(angle) * r;
+              const y = Math.sin(angle) * r;
+              i === 0 ? shape.moveTo(x, y) : shape.lineTo(x, y);
+            }
+            shape.closePath();
+            const geo = new THREE.ExtrudeGeometry(shape, {
+              depth: 0.24, bevelEnabled: true,
+              bevelSize: 0.05, bevelThickness: 0.05, bevelSegments: 2
+            });
+            geo.center();
+            const mat = new THREE.MeshPhongMaterial({
+              color: 0xa855f7, emissive: 0x2d0a6b,
+              specular: 0xffd700, shininess: 200
+            });
+            return new THREE.Mesh(geo, mat);
+          },
+          ry: 0.011, rx: 0.006
+        }
+      ];
+
+
+      valueCfgs.forEach(cfg => {
+        const canvas = document.getElementById(cfg.id);
+        if (!canvas) return;
+        const W = 52, H = 52;
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(W, H);
+        renderer.setClearColor(0x000000, 0);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+        camera.position.set(0, 0, 3.2);
+
+        scene.add(new THREE.AmbientLight(0x7c3aed, 0.5));
+        const d1 = new THREE.DirectionalLight(0xa855f7, 1.3);
+        d1.position.set(2, 3, 2); scene.add(d1);
+        const d2 = new THREE.DirectionalLight(0xec4899, 0.9);
+        d2.position.set(-2, -1, 1); scene.add(d2);
+
+        const mesh = cfg.createMesh();
+        scene.add(mesh);
+
+        (function animate() {
+          requestAnimationFrame(animate);
+          mesh.rotation.y += cfg.ry;
+          mesh.rotation.x += cfg.rx;
+          renderer.render(scene, camera);
+        })();
+      });
+    })();
+  </script>
+  <script>
+    /* ── Vision Pillar 3D Icons ── */
+    (function initVisionPillars() {
+      if (typeof THREE === 'undefined') return;
+
+      const configs = [
+        {
+          id: 'pillar3d-1',
+          // Wireframe sphere → Accessibilità
+          createMesh: () => {
+            const geo = new THREE.SphereGeometry(1, 14, 10);
+            const mat = new THREE.MeshBasicMaterial({
+              color: 0xa855f7,
+              wireframe: true,
+              transparent: true,
+              opacity: 0.85
+            });
+            const sphere = new THREE.Mesh(geo, mat);
+            // outer glow ring
+            const rGeo = new THREE.TorusGeometry(1.18, 0.025, 8, 60);
+            const rMat = new THREE.MeshBasicMaterial({ color: 0xec4899, transparent: true, opacity: 0.6 });
+            const ring = new THREE.Mesh(rGeo, rMat);
+            ring.rotation.x = Math.PI / 2.5;
+            const grp = new THREE.Group();
+            grp.add(sphere); grp.add(ring);
+            return grp;
+          },
+          rotateY: 0.008, rotateX: 0.004
+        },
+        {
+          id: 'pillar3d-2',
+          // Octahedron crystal → Innovazione
+          createMesh: () => {
+            const geo = new THREE.OctahedronGeometry(1, 0);
+            const mat = new THREE.MeshPhongMaterial({
+              color: 0x7c3aed,
+              emissive: 0x3b1a7a,
+              specular: 0xec4899,
+              shininess: 120,
+              transparent: true,
+              opacity: 0.92,
+              flatShading: true
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            // wireframe overlay
+            const wGeo = new THREE.OctahedronGeometry(1.02, 0);
+            const wMat = new THREE.MeshBasicMaterial({ color: 0xec4899, wireframe: true, transparent: true, opacity: 0.4 });
+            const wire = new THREE.Mesh(wGeo, wMat);
+            const grp = new THREE.Group();
+            grp.add(mesh); grp.add(wire);
+            return grp;
+          },
+          rotateY: 0.01, rotateX: 0.006
+        },
+        {
+          id: 'pillar3d-3',
+          // Torus knot → Crescita
+          createMesh: () => {
+            const geo = new THREE.TorusKnotGeometry(0.68, 0.22, 80, 12, 2, 3);
+            const mat = new THREE.MeshPhongMaterial({
+              color: 0xa855f7,
+              emissive: 0x2d0a6b,
+              specular: 0xffffff,
+              shininess: 150,
+              transparent: true,
+              opacity: 0.93
+            });
+            return new THREE.Mesh(geo, mat);
+          },
+          rotateY: 0.012, rotateX: 0.005
+        }
+      ];
+
+      configs.forEach(cfg => {
+        const canvas = document.getElementById(cfg.id);
+        if (!canvas) return;
+
+        const W = 80, H = 80;
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(W, H);
+        renderer.setClearColor(0x000000, 0);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 100);
+        camera.position.set(0, 0, 3.6);
+
+        // Lights
+        const ambient = new THREE.AmbientLight(0x7c3aed, 0.6);
+        scene.add(ambient);
+        const dir1 = new THREE.DirectionalLight(0xa855f7, 1.2);
+        dir1.position.set(2, 3, 2);
+        scene.add(dir1);
+        const dir2 = new THREE.DirectionalLight(0xec4899, 0.8);
+        dir2.position.set(-2, -1, 1);
+        scene.add(dir2);
+
+        const mesh = cfg.createMesh();
+        scene.add(mesh);
+
+        function animate() {
+          requestAnimationFrame(animate);
+          mesh.rotation.y += cfg.rotateY;
+          mesh.rotation.x += cfg.rotateX;
+          renderer.render(scene, camera);
+        }
+        animate();
+      });
+    })();
+  </script>
+</body>
+
+</html>
